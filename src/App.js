@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom'
+import CheckoutSuccess from './components/CheckoutSuccess';
+import ProductCard from './components/ProductCard';
+import ResponsiveAppBar from './components/ResponsiveAppBar';
+import CheckoutFailed from './components/CheckoutFailed';
+import ContactBar from './components/ContactBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <ContactBar/>
+        <ResponsiveAppBar/>
+        <Routes>
+          <Route path='/checkout-success' element={<CheckoutSuccess/>}/>
+          <Route path='/checkout-cancel' element={<CheckoutFailed/>}/>
+          <Route path ='/' element={<ProductCard/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
