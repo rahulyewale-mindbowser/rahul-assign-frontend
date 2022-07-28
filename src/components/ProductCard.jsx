@@ -19,6 +19,7 @@ const Responsive = styled("Grid")(({ theme }) => ({
     width: "100%",
     zIndex: 3,
     backgroundColor: "white",
+    height:'4rem',
   },
 }));
 
@@ -72,7 +73,7 @@ const ProductCard = () => {
               <div style={{display:'flex',alignItems:'center',justifyContent:'space-around'}}
               >
                 <p>
-                  Price<span style={{ fontWeight: "bold" }}>$299.00</span>
+                  Price<span style={{ fontWeight: "bold" }}> $299.00</span>
                 </p>
                 <QuantityBox />
                 <ResButton>
@@ -93,7 +94,7 @@ const ProductCard = () => {
             md={6}
             sx={{
               backgroundColor: "#F6F6F6",
-              pb: "3rem",
+              pb: "4rem",
               fontWeight: "200",
               pl: 10,
               pr: 2,
