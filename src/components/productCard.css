@@ -12,6 +12,7 @@ dd{
 }
 
 li{
-    /* font-size: small; */
+    font-size: 14px;
+    font-weight: 300;
     margin-left: 1.5rem;
 }

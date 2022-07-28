@@ -30,7 +30,7 @@ export default function ResponsiveAppBar() {
         position="relative"
         sx={{ backgroundColor: "white", color: "black",boxShadow:0 ,mt:5}}
       >
-        <Toolbar >
+        <Toolbar fontSize="14px" >
         <Typography   sx={{ flexGrow: 1 ,fontSize:"8%"}}>
         <img src={icon} alt="icon" width='30%' height='30%' />
           </Typography>
