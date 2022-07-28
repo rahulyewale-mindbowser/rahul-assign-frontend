@@ -25,14 +25,14 @@ export default function ResponsiveAppBar() {
         <MenuIcon style={{color:'black'}} />
         </Toolbar>
       </AppBar>
-      :<Box sx={{ flexGrow: 1,pl:"10%",pr:"10%" }}>
+      :<Box sx={{ flexGrow: 1,justifyContent:'center',}} paddingLeft={{lg:23,md:6}} paddingRight={{lg:60,md:6}}>
       <AppBar
         position="relative"
         sx={{ backgroundColor: "white", color: "black",boxShadow:0 ,mt:5}}
       >
         <Toolbar >
         <Typography   sx={{ flexGrow: 1 ,fontSize:"8%"}}>
-        <img src={icon} alt="icon" width='20%' height='20%' />
+        <img src={icon} alt="icon" width='30%' height='30%' />
           </Typography>
           
           <Typography  fontSize={'1rem'} fontWeight={600} sx={{ flexGrow: 1 }}>

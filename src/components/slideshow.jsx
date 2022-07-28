@@ -35,7 +35,7 @@ function Slideshow() {
 
   return (
     <div className="slideshow-container" style={{ textAlign: "center" }}>
-      <img src={images[index]} alt="cleaning images" width="60%" height="70%" />
+      <img src={images[index]} alt="cleaning images" width="50%" height="50%" />
       <div className="slideshowDots">
         {images.map((_, idx) => (
           <div

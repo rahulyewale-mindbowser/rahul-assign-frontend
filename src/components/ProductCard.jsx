@@ -5,8 +5,10 @@ import { Typography, TextField, styled } from "@mui/material";
 import "./productCard.css";
 import Slideshow from "./slideshow";
 import PayButton from "./PayButton";
+import {Link} from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material";
+
 
 const Responsive = styled("Grid")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
@@ -35,9 +37,8 @@ const ProductCard = () => {
       <Box sx={{ width: "100%" }}>
         <Grid
           container
-          rowSpacing={1}
-          columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 4 }}
-          sx={{ mt: 2, p: 1, alignItems: "center" }}
+          columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 7 }}
+          sx={{ mt: 2,  alignItems: "center" }}
           paddingLeft={{ sm: 1, md: 3, lg: 5 }}
         >
           <Grid
@@ -47,8 +48,12 @@ const ProductCard = () => {
             lg={6}
             order={{ sm: 2, xs: 2, md: 1, lg: 1 }}
             className="AbtProduct"
+            MarginLeft={{lg:25}}
+            
           >
-            <a href="/">About Product</a>
+            {/* <a href="/">About Product</a> */}
+            <Link href="#" paddingLeft={{lg:30,sm:5,xs:5,md:5}}>About Product</Link>
+
           </Grid>
           <Grid
             container
@@ -72,9 +77,12 @@ const ProductCard = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   width: "100%",
+                  height:40
                 }}
+                paddingLeft={{lg:60}}
               >
-                <h5>Price:$299.00</h5>
+                <p>Price<span style={{fontWeight:'bold'}}>$299.00</span></p>
+                {/* <Typography width={100}>Price<span style={{fontWeight:'bold'}}> $299</span> </Typography> */}
                 <ResButton>
                   <TextField
                     id="outlined-number"
@@ -82,9 +90,9 @@ const ProductCard = () => {
                     InputProps={{ inputProps: { min: 1, max: 3 } }}
                     value={quantity}
                     sx={{
-                      width: { xs: 50, sm: 50, md: 55 },
+                      width: { xs: "7rem", sm: 50, md: 55,lg:60 },
                       "& .MuiInputBase-root": {
-                        height: 30,
+                        height: 35,
                       },
                       m: 1,
                     }}
@@ -116,9 +124,10 @@ const ProductCard = () => {
               pr: 2,
             }}
             order={{ sm: 3, xs: 3, md: 3, lg: 3 }}
+            
           >
-            <Typography sx={{ fontFamily: "Poppins" }}>
-              {isMobile ? "" : <dd>APPLE PRODUCTS</dd>}
+            <Typography sx={{ fontFamily: "Poppins" }} paddingLeft={{lg:25}}>
+              {isMobile ? "" : <dd style={{color:'##A2A6B0'}}>APPLE PRODUCTS</dd>}
 
               <dd>
                 <h3 sx={{ fontFamily: "Poppins" }}>
@@ -162,7 +171,7 @@ const ProductCard = () => {
             xs={12}
             md={6}
             lg={6}
-            sx={{ height: "100%", width: "50%", mt: 4 }}
+            sx={{ height: "100%", width: "50%", mt: 4}}
             order={{ sm: 1, xs: 1, md: 4, lg: 4 }}
           >
             <Slideshow />

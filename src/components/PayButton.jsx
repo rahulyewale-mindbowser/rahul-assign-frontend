@@ -22,7 +22,7 @@ const PayButton = (props) => {
     }
   return (
     <>
-    <Button variant='contained' sx={{ backgroundColor:'#0156FF', borderRadius:'20px',height:30 ,fontSize:10,width:'5rem',textTransform:'capitalize'}} onClick={()=>handlecheckout()}>Buy Now</Button>
+    <Button variant='contained' sx={{ color:'white' ,backgroundColor:'#0156FF', borderRadius:'20px',height:'2.5rem' ,fontSize:"1rem",width:'7rem',textTransform:'capitalize'}} onClick={()=>handlecheckout()}>Buy Now</Button>
     
     </>
   )
